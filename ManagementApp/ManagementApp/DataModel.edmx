@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DataManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="NameAC" Type="nvarchar" MaxLength="100" />
+          <Property Name="CountryAC" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="varchar" MaxLength="20" />
+          <Property Name="idSA" Type="char" MaxLength="5" />
+          <Property Name="idDevice" Type="int" />
+          <Property Name="passAC" Type="varchar" MaxLength="50" />
+          <Property Name="twoFA" Type="varchar" MaxLength="100" />
+          <Property Name="emailAC" Type="varchar" MaxLength="100" />
+          <Property Name="passEmail" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="ADS">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="NameADS" Type="nvarchar" MaxLength="100" />
+          <Property Name="TypeADS" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsPersonal" Type="bit" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="100" />
+          <Property Name="Limit" Type="int" />
+          <Property Name="Threshold" Type="int" />
+          <Property Name="Balance" Type="int" />
+          <Property Name="SpentAmount" Type="int" />
+          <Property Name="PaymentMethods" Type="int" />
+          <Property Name="idSA" Type="char" MaxLength="5" />
+          <Property Name="idAC" Type="int" />
+        </EntityType>
+        <EntityType Name="BM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="NameBM" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="SharingStatus" Type="int" />
+          <Property Name="AdCreateLimit" Type="int" />
+          <Property Name="Verified" Type="int" />
+          <Property Name="PaymentMethods" Type="int" />
+          <Property Name="idSA" Type="char" MaxLength="5" />
+          <Property Name="iaAC" Type="char" MaxLength="20" />
+          <Property Name="idAC" Type="int" />
+        </EntityType>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="idDevice" />
+          </Key>
+          <Property Name="idDevice" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nameDevice" Type="nvarchar" MaxLength="50" />
+          <Property Name="serialnumber" Type="char" MaxLength="20" />
+          <Property Name="typeDevice" Type="nvarchar" MaxLength="20" />
+          <Property Name="idSA" Type="char" MaxLength="5" />
+        </EntityType>
+        <EntityType Name="GroupM">
+          <Key>
+            <PropertyRef Name="idG" />
+          </Key>
+          <Property Name="idG" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="nameG" Type="nvarchar" MaxLength="100" />
+          <Property Name="MemCount" Type="int" />
+          <Property Name="countryG" Type="nvarchar" MaxLength="100" />
+          <Property Name="languageG" Type="nvarchar" MaxLength="100" />
+          <Property Name="Topic" Type="nvarchar" MaxLength="100" />
+          <Property Name="CHECKidSA" Type="char" MaxLength="5" />
+          <Property Name="idAC" Type="char" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="PageM">
+          <Key>
+            <PropertyRef Name="idP" />
+          </Key>
+          <Property Name="idP" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="nameP" Type="nvarchar" MaxLength="100" />
+          <Property Name="FollowCount" Type="int" />
+          <Property Name="VideoCount" Type="int" />
+          <Property Name="ViewCount" Type="int" />
+          <Property Name="Adbreak" Type="bit" />
+          <Property Name="Reel" Type="bit" />
+          <Property Name="Bonus" Type="bit" />
+          <Property Name="RightManager" Type="bit" />
+          <Property Name="Verified" Type="bit" />
+          <Property Name="countryP" Type="nvarchar" MaxLength="100" />
+          <Property Name="languageP" Type="nvarchar" MaxLength="100" />
+          <Property Name="Topic" Type="nvarchar" MaxLength="100" />
+          <Property Name="CHECKidSA" Type="char" MaxLength="5" />
+          <Property Name="idAC" Type="char" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Payout">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="NamePayout" Type="nvarchar" MaxLength="100" />
+          <Property Name="country" Type="nvarchar" MaxLength="100" />
+          <Property Name="Type" Type="nvarchar" MaxLength="100" />
+          <Property Name="Status" Type="nvarchar" MaxLength="100" />
+          <Property Name="EarningSources" Type="nvarchar" MaxLength="500" />
+          <Property Name="CHECKidSA" Type="char" MaxLength="5" />
+          <Property Name="idAC" Type="int" />
+        </EntityType>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="RoleSA">
+          <Key>
+            <PropertyRef Name="idRole" />
+          </Key>
+          <Property Name="idRole" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NamRole" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="StaffaAccount">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="idSA" Type="char" MaxLength="5" />
+          <Property Name="idAC" Type="varchar" MaxLength="20" />
+          <Property Name="nameDevice" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="StaffAccount">
+          <Key>
+            <PropertyRef Name="idSA" />
+          </Key>
+          <Property Name="idSA" Type="char" MaxLength="5" Nullable="false" />
+          <Property Name="UserSA" Type="varchar" MaxLength="30" />
+          <Property Name="NameSA" Type="nvarchar" MaxLength="50" />
+          <Property Name="PassWordSA" Type="varchar" MaxLength="100" />
+          <Property Name="idRole" Type="int" />
+          <Property Name="cerated" Type="date" />
+          <Property Name="noteSA" Type="nchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK_NV_RL">
+          <End Role="RoleSA" Type="Self.RoleSA" Multiplicity="0..1" />
+          <End Role="StaffAccount" Type="Self.StaffAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RoleSA">
+              <PropertyRef Name="idRole" />
+            </Principal>
+            <Dependent Role="StaffAccount">
+              <PropertyRef Name="idRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RL_NV">
+          <End Role="RoleSA" Type="Self.RoleSA" Multiplicity="0..1" />
+          <End Role="StaffAccount" Type="Self.StaffAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RoleSA">
+              <PropertyRef Name="idRole" />
+            </Principal>
+            <Dependent Role="StaffAccount">
+              <PropertyRef Name="idRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DataManagementModelStoreContainer">
+          <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ADS" EntityType="Self.ADS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BM" EntityType="Self.BM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Device" EntityType="Self.Device" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GroupM" EntityType="Self.GroupM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PageM" EntityType="Self.PageM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Payout" EntityType="Self.Payout" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Resource" EntityType="Self.Resource" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoleSA" EntityType="Self.RoleSA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StaffaAccount" EntityType="Self.StaffaAccount" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StaffAccount" EntityType="Self.StaffAccount" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_NV_RL" Association="Self.FK_NV_RL">
+            <End Role="RoleSA" EntitySet="RoleSA" />
+            <End Role="StaffAccount" EntitySet="StaffAccount" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RL_NV" Association="Self.FK_RL_NV">
+            <End Role="RoleSA" EntitySet="RoleSA" />
+            <End Role="StaffAccount" EntitySet="StaffAccount" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DataManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DataManagementEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="DataManagementModel.Account" />
+          <EntitySet Name="ADS" EntityType="DataManagementModel.AD" />
+          <EntitySet Name="BMs" EntityType="DataManagementModel.BM" />
+          <EntitySet Name="Devices" EntityType="DataManagementModel.Device" />
+          <EntitySet Name="GroupMs" EntityType="DataManagementModel.GroupM" />
+          <EntitySet Name="PageMs" EntityType="DataManagementModel.PageM" />
+          <EntitySet Name="Payouts" EntityType="DataManagementModel.Payout" />
+          <EntitySet Name="Resources" EntityType="DataManagementModel.Resource" />
+          <EntitySet Name="RoleSAs" EntityType="DataManagementModel.RoleSA" />
+          <EntitySet Name="StaffaAccounts" EntityType="DataManagementModel.StaffaAccount" />
+          <EntitySet Name="StaffAccounts" EntityType="DataManagementModel.StaffAccount" />
+          <AssociationSet Name="FK_NV_RL" Association="DataManagementModel.FK_NV_RL">
+            <End Role="RoleSA" EntitySet="RoleSAs" />
+            <End Role="StaffAccount" EntitySet="StaffAccounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_RL_NV" Association="DataManagementModel.FK_RL_NV">
+            <End Role="RoleSA" EntitySet="RoleSAs" />
+            <End Role="StaffAccount" EntitySet="StaffAccounts" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Account">
+          <Key>
+            <PropertyRef Name="UID" />
+          </Key>
+          <Property Name="UID" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="NameAC" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CountryAC" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="idSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="idDevice" Type="Int32" />
+          <Property Name="passAC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="twoFA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="emailAC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="passEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="AD">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="NameADS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="TypeADS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsPersonal" Type="Boolean" />
+          <Property Name="Currency" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Limit" Type="Int32" />
+          <Property Name="Threshold" Type="Int32" />
+          <Property Name="Balance" Type="Int32" />
+          <Property Name="SpentAmount" Type="Int32" />
+          <Property Name="PaymentMethods" Type="Int32" />
+          <Property Name="idSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="idAC" Type="Int32" />
+        </EntityType>
+        <EntityType Name="BM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="NameBM" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="SharingStatus" Type="Int32" />
+          <Property Name="AdCreateLimit" Type="Int32" />
+          <Property Name="Verified" Type="Int32" />
+          <Property Name="PaymentMethods" Type="Int32" />
+          <Property Name="idSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="iaAC" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="idAC" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Device">
+          <Key>
+            <PropertyRef Name="idDevice" />
+          </Key>
+          <Property Name="idDevice" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nameDevice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="serialnumber" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="typeDevice" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="idSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="GroupM">
+          <Key>
+            <PropertyRef Name="idG" />
+          </Key>
+          <Property Name="idG" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="nameG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="MemCount" Type="Int32" />
+          <Property Name="countryG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="languageG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Topic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CHECKidSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="idAC" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="PageM">
+          <Key>
+            <PropertyRef Name="idP" />
+          </Key>
+          <Property Name="idP" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="nameP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FollowCount" Type="Int32" />
+          <Property Name="VideoCount" Type="Int32" />
+          <Property Name="ViewCount" Type="Int32" />
+          <Property Name="Adbreak" Type="Boolean" />
+          <Property Name="Reel" Type="Boolean" />
+          <Property Name="Bonus" Type="Boolean" />
+          <Property Name="RightManager" Type="Boolean" />
+          <Property Name="Verified" Type="Boolean" />
+          <Property Name="countryP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="languageP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Topic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CHECKidSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="idAC" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Payout">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="NamePayout" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EarningSources" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="CHECKidSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="idAC" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Resource">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RoleSA">
+          <Key>
+            <PropertyRef Name="idRole" />
+          </Key>
+          <Property Name="idRole" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NamRole" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="StaffAccounts" Relationship="DataManagementModel.FK_NV_RL" FromRole="RoleSA" ToRole="StaffAccount" />
+          <NavigationProperty Name="StaffAccounts1" Relationship="DataManagementModel.FK_RL_NV" FromRole="RoleSA" ToRole="StaffAccount" />
+        </EntityType>
+        <EntityType Name="StaffaAccount">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="idSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="idAC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="nameDevice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="StaffAccount">
+          <Key>
+            <PropertyRef Name="idSA" />
+          </Key>
+          <Property Name="idSA" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+          <Property Name="UserSA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="NameSA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PassWordSA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="idRole" Type="Int32" />
+          <Property Name="cerated" Type="DateTime" Precision="0" />
+          <Property Name="noteSA" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="RoleSA" Relationship="DataManagementModel.FK_NV_RL" FromRole="StaffAccount" ToRole="RoleSA" />
+          <NavigationProperty Name="RoleSA1" Relationship="DataManagementModel.FK_RL_NV" FromRole="StaffAccount" ToRole="RoleSA" />
+        </EntityType>
+        <Association Name="FK_NV_RL">
+          <End Type="DataManagementModel.RoleSA" Role="RoleSA" Multiplicity="0..1" />
+          <End Type="DataManagementModel.StaffAccount" Role="StaffAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RoleSA">
+              <PropertyRef Name="idRole" />
+            </Principal>
+            <Dependent Role="StaffAccount">
+              <PropertyRef Name="idRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_RL_NV">
+          <End Type="DataManagementModel.RoleSA" Role="RoleSA" Multiplicity="0..1" />
+          <End Type="DataManagementModel.StaffAccount" Role="StaffAccount" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RoleSA">
+              <PropertyRef Name="idRole" />
+            </Principal>
+            <Dependent Role="StaffAccount">
+              <PropertyRef Name="idRole" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DataManagementModelStoreContainer" CdmEntityContainer="DataManagementEntities">
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="DataManagementModel.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="passEmail" ColumnName="passEmail" />
+                <ScalarProperty Name="emailAC" ColumnName="emailAC" />
+                <ScalarProperty Name="twoFA" ColumnName="twoFA" />
+                <ScalarProperty Name="passAC" ColumnName="passAC" />
+                <ScalarProperty Name="idDevice" ColumnName="idDevice" />
+                <ScalarProperty Name="idSA" ColumnName="idSA" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CountryAC" ColumnName="CountryAC" />
+                <ScalarProperty Name="NameAC" ColumnName="NameAC" />
+                <ScalarProperty Name="UID" ColumnName="UID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ADS">
+            <EntityTypeMapping TypeName="DataManagementModel.AD">
+              <MappingFragment StoreEntitySet="ADS">
+                <ScalarProperty Name="idAC" ColumnName="idAC" />
+                <ScalarProperty Name="idSA" ColumnName="idSA" />
+                <ScalarProperty Name="PaymentMethods" ColumnName="PaymentMethods" />
+                <ScalarProperty Name="SpentAmount" ColumnName="SpentAmount" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Threshold" ColumnName="Threshold" />
+                <ScalarProperty Name="Limit" ColumnName="Limit" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="IsPersonal" ColumnName="IsPersonal" />
+                <ScalarProperty Name="TypeADS" ColumnName="TypeADS" />
+                <ScalarProperty Name="NameADS" ColumnName="NameADS" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BMs">
+            <EntityTypeMapping TypeName="DataManagementModel.BM">
+              <MappingFragment StoreEntitySet="BM">
+                <ScalarProperty Name="idAC" ColumnName="idAC" />
+                <ScalarProperty Name="iaAC" ColumnName="iaAC" />
+                <ScalarProperty Name="idSA" ColumnName="idSA" />
+                <ScalarProperty Name="PaymentMethods" ColumnName="PaymentMethods" />
+                <ScalarProperty Name="Verified" ColumnName="Verified" />
+                <ScalarProperty Name="AdCreateLimit" ColumnName="AdCreateLimit" />
+                <ScalarProperty Name="SharingStatus" ColumnName="SharingStatus" />
+                <ScalarProperty Name="NameBM" ColumnName="NameBM" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Devices">
+            <EntityTypeMapping TypeName="DataManagementModel.Device">
+              <MappingFragment StoreEntitySet="Device">
+                <ScalarProperty Name="idSA" ColumnName="idSA" />
+                <ScalarProperty Name="typeDevice" ColumnName="typeDevice" />
+                <ScalarProperty Name="serialnumber" ColumnName="serialnumber" />
+                <ScalarProperty Name="nameDevice" ColumnName="nameDevice" />
+                <ScalarProperty Name="idDevice" ColumnName="idDevice" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupMs">
+            <EntityTypeMapping TypeName="DataManagementModel.GroupM">
+              <MappingFragment StoreEntitySet="GroupM">
+                <ScalarProperty Name="idAC" ColumnName="idAC" />
+                <ScalarProperty Name="CHECKidSA" ColumnName="CHECKidSA" />
+                <ScalarProperty Name="Topic" ColumnName="Topic" />
+                <ScalarProperty Name="languageG" ColumnName="languageG" />
+                <ScalarProperty Name="countryG" ColumnName="countryG" />
+                <ScalarProperty Name="MemCount" ColumnName="MemCount" />
+                <ScalarProperty Name="nameG" ColumnName="nameG" />
+                <ScalarProperty Name="idG" ColumnName="idG" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PageMs">
+            <EntityTypeMapping TypeName="DataManagementModel.PageM">
+              <MappingFragment StoreEntitySet="PageM">
+                <ScalarProperty Name="idAC" ColumnName="idAC" />
+                <ScalarProperty Name="CHECKidSA" ColumnName="CHECKidSA" />
+                <ScalarProperty Name="Topic" ColumnName="Topic" />
+                <ScalarProperty Name="languageP" ColumnName="languageP" />
+                <ScalarProperty Name="countryP" ColumnName="countryP" />
+                <ScalarProperty Name="Verified" ColumnName="Verified" />
+                <ScalarProperty Name="RightManager" ColumnName="RightManager" />
+                <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+                <ScalarProperty Name="Reel" ColumnName="Reel" />
+                <ScalarProperty Name="Adbreak" ColumnName="Adbreak" />
+                <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+                <ScalarProperty Name="VideoCount" ColumnName="VideoCount" />
+                <ScalarProperty Name="FollowCount" ColumnName="FollowCount" />
+                <ScalarProperty Name="nameP" ColumnName="nameP" />
+                <ScalarProperty Name="idP" ColumnName="idP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payouts">
+            <EntityTypeMapping TypeName="DataManagementModel.Payout">
+              <MappingFragment StoreEntitySet="Payout">
+                <ScalarProperty Name="idAC" ColumnName="idAC" />
+                <ScalarProperty Name="CHECKidSA" ColumnName="CHECKidSA" />
+                <ScalarProperty Name="EarningSources" ColumnName="EarningSources" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="NamePayout" ColumnName="NamePayout" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Resources">
+            <EntityTypeMapping TypeName="DataManagementModel.Resource">
+              <MappingFragment StoreEntitySet="Resource">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleSAs">
+            <EntityTypeMapping TypeName="DataManagementModel.RoleSA">
+              <MappingFragment StoreEntitySet="RoleSA">
+                <ScalarProperty Name="NamRole" ColumnName="NamRole" />
+                <ScalarProperty Name="idRole" ColumnName="idRole" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StaffaAccounts">
+            <EntityTypeMapping TypeName="DataManagementModel.StaffaAccount">
+              <MappingFragment StoreEntitySet="StaffaAccount">
+                <ScalarProperty Name="nameDevice" ColumnName="nameDevice" />
+                <ScalarProperty Name="idAC" ColumnName="idAC" />
+                <ScalarProperty Name="idSA" ColumnName="idSA" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StaffAccounts">
+            <EntityTypeMapping TypeName="DataManagementModel.StaffAccount">
+              <MappingFragment StoreEntitySet="StaffAccount">
+                <ScalarProperty Name="noteSA" ColumnName="noteSA" />
+                <ScalarProperty Name="cerated" ColumnName="cerated" />
+                <ScalarProperty Name="idRole" ColumnName="idRole" />
+                <ScalarProperty Name="PassWordSA" ColumnName="PassWordSA" />
+                <ScalarProperty Name="NameSA" ColumnName="NameSA" />
+                <ScalarProperty Name="UserSA" ColumnName="UserSA" />
+                <ScalarProperty Name="idSA" ColumnName="idSA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram DiagramId="e25a65bfd0494dd9b4a4c6a9637e0081" Name="Diagram1">
+        <EntityTypeShape EntityType="DataManagementModel.Account" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DataManagementModel.AD" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DataManagementModel.BM" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DataManagementModel.Device" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DataManagementModel.GroupM" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="DataManagementModel.PageM" Width="1.5" PointX="6.75" PointY="7.75" />
+        <EntityTypeShape EntityType="DataManagementModel.Payout" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DataManagementModel.Resource" Width="1.5" PointX="8.75" PointY="4.75" />
+        <EntityTypeShape EntityType="DataManagementModel.RoleSA" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="DataManagementModel.StaffaAccount" Width="1.5" PointX="8.75" PointY="7.75" />
+        <EntityTypeShape EntityType="DataManagementModel.StaffAccount" Width="1.5" PointX="3" PointY="1" />
+        <AssociationConnector Association="DataManagementModel.FK_NV_RL" />
+        <AssociationConnector Association="DataManagementModel.FK_RL_NV" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

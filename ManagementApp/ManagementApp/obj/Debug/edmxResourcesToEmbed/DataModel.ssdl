@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataManagementModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="NameAC" Type="nvarchar" MaxLength="100" />
+    <Property Name="CountryAC" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="varchar" MaxLength="20" />
+    <Property Name="idSA" Type="char" MaxLength="5" />
+    <Property Name="idDevice" Type="int" />
+    <Property Name="passAC" Type="varchar" MaxLength="50" />
+    <Property Name="twoFA" Type="varchar" MaxLength="100" />
+    <Property Name="emailAC" Type="varchar" MaxLength="100" />
+    <Property Name="passEmail" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="ADS">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="NameADS" Type="nvarchar" MaxLength="100" />
+    <Property Name="TypeADS" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsPersonal" Type="bit" />
+    <Property Name="Currency" Type="nvarchar" MaxLength="100" />
+    <Property Name="Limit" Type="int" />
+    <Property Name="Threshold" Type="int" />
+    <Property Name="Balance" Type="int" />
+    <Property Name="SpentAmount" Type="int" />
+    <Property Name="PaymentMethods" Type="int" />
+    <Property Name="idSA" Type="char" MaxLength="5" />
+    <Property Name="idAC" Type="int" />
+  </EntityType>
+  <EntityType Name="BM">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="NameBM" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="SharingStatus" Type="int" />
+    <Property Name="AdCreateLimit" Type="int" />
+    <Property Name="Verified" Type="int" />
+    <Property Name="PaymentMethods" Type="int" />
+    <Property Name="idSA" Type="char" MaxLength="5" />
+    <Property Name="iaAC" Type="char" MaxLength="20" />
+    <Property Name="idAC" Type="int" />
+  </EntityType>
+  <EntityType Name="Device">
+    <Key>
+      <PropertyRef Name="idDevice" />
+    </Key>
+    <Property Name="idDevice" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nameDevice" Type="nvarchar" MaxLength="50" />
+    <Property Name="serialnumber" Type="char" MaxLength="20" />
+    <Property Name="typeDevice" Type="nvarchar" MaxLength="20" />
+    <Property Name="idSA" Type="char" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="GroupM">
+    <Key>
+      <PropertyRef Name="idG" />
+    </Key>
+    <Property Name="idG" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="nameG" Type="nvarchar" MaxLength="100" />
+    <Property Name="MemCount" Type="int" />
+    <Property Name="countryG" Type="nvarchar" MaxLength="100" />
+    <Property Name="languageG" Type="nvarchar" MaxLength="100" />
+    <Property Name="Topic" Type="nvarchar" MaxLength="100" />
+    <Property Name="CHECKidSA" Type="char" MaxLength="5" />
+    <Property Name="idAC" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="PageM">
+    <Key>
+      <PropertyRef Name="idP" />
+    </Key>
+    <Property Name="idP" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="nameP" Type="nvarchar" MaxLength="100" />
+    <Property Name="FollowCount" Type="int" />
+    <Property Name="VideoCount" Type="int" />
+    <Property Name="ViewCount" Type="int" />
+    <Property Name="Adbreak" Type="bit" />
+    <Property Name="Reel" Type="bit" />
+    <Property Name="Bonus" Type="bit" />
+    <Property Name="RightManager" Type="bit" />
+    <Property Name="Verified" Type="bit" />
+    <Property Name="countryP" Type="nvarchar" MaxLength="100" />
+    <Property Name="languageP" Type="nvarchar" MaxLength="100" />
+    <Property Name="Topic" Type="nvarchar" MaxLength="100" />
+    <Property Name="CHECKidSA" Type="char" MaxLength="5" />
+    <Property Name="idAC" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Payout">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="NamePayout" Type="nvarchar" MaxLength="100" />
+    <Property Name="country" Type="nvarchar" MaxLength="100" />
+    <Property Name="Type" Type="nvarchar" MaxLength="100" />
+    <Property Name="Status" Type="nvarchar" MaxLength="100" />
+    <Property Name="EarningSources" Type="nvarchar" MaxLength="500" />
+    <Property Name="CHECKidSA" Type="char" MaxLength="5" />
+    <Property Name="idAC" Type="int" />
+  </EntityType>
+  <EntityType Name="Resource">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="RoleSA">
+    <Key>
+      <PropertyRef Name="idRole" />
+    </Key>
+    <Property Name="idRole" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NamRole" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StaffaAccount">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="idSA" Type="char" MaxLength="5" />
+    <Property Name="idAC" Type="varchar" MaxLength="20" />
+    <Property Name="nameDevice" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StaffAccount">
+    <Key>
+      <PropertyRef Name="idSA" />
+    </Key>
+    <Property Name="idSA" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="UserSA" Type="varchar" MaxLength="30" />
+    <Property Name="NameSA" Type="nvarchar" MaxLength="50" />
+    <Property Name="PassWordSA" Type="varchar" MaxLength="100" />
+    <Property Name="idRole" Type="int" />
+    <Property Name="cerated" Type="date" />
+    <Property Name="noteSA" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK_NV_RL">
+    <End Role="RoleSA" Type="Self.RoleSA" Multiplicity="0..1" />
+    <End Role="StaffAccount" Type="Self.StaffAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoleSA">
+        <PropertyRef Name="idRole" />
+      </Principal>
+      <Dependent Role="StaffAccount">
+        <PropertyRef Name="idRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_NV">
+    <End Role="RoleSA" Type="Self.RoleSA" Multiplicity="0..1" />
+    <End Role="StaffAccount" Type="Self.StaffAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoleSA">
+        <PropertyRef Name="idRole" />
+      </Principal>
+      <Dependent Role="StaffAccount">
+        <PropertyRef Name="idRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DataManagementModelStoreContainer">
+    <EntitySet Name="Account" EntityType="Self.Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADS" EntityType="Self.ADS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BM" EntityType="Self.BM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Device" EntityType="Self.Device" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GroupM" EntityType="Self.GroupM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PageM" EntityType="Self.PageM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payout" EntityType="Self.Payout" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Resource" EntityType="Self.Resource" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RoleSA" EntityType="Self.RoleSA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StaffaAccount" EntityType="Self.StaffaAccount" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="StaffAccount" EntityType="Self.StaffAccount" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_NV_RL" Association="Self.FK_NV_RL">
+      <End Role="RoleSA" EntitySet="RoleSA" />
+      <End Role="StaffAccount" EntitySet="StaffAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_NV" Association="Self.FK_RL_NV">
+      <End Role="RoleSA" EntitySet="RoleSA" />
+      <End Role="StaffAccount" EntitySet="StaffAccount" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

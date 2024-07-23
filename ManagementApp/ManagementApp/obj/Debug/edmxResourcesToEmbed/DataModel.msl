@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataManagementModelStoreContainer" CdmEntityContainer="DataManagementEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="DataManagementModel.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="passEmail" ColumnName="passEmail" />
+          <ScalarProperty Name="emailAC" ColumnName="emailAC" />
+          <ScalarProperty Name="twoFA" ColumnName="twoFA" />
+          <ScalarProperty Name="passAC" ColumnName="passAC" />
+          <ScalarProperty Name="idDevice" ColumnName="idDevice" />
+          <ScalarProperty Name="idSA" ColumnName="idSA" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="CountryAC" ColumnName="CountryAC" />
+          <ScalarProperty Name="NameAC" ColumnName="NameAC" />
+          <ScalarProperty Name="UID" ColumnName="UID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADS">
+      <EntityTypeMapping TypeName="DataManagementModel.AD">
+        <MappingFragment StoreEntitySet="ADS">
+          <ScalarProperty Name="idAC" ColumnName="idAC" />
+          <ScalarProperty Name="idSA" ColumnName="idSA" />
+          <ScalarProperty Name="PaymentMethods" ColumnName="PaymentMethods" />
+          <ScalarProperty Name="SpentAmount" ColumnName="SpentAmount" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Threshold" ColumnName="Threshold" />
+          <ScalarProperty Name="Limit" ColumnName="Limit" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="IsPersonal" ColumnName="IsPersonal" />
+          <ScalarProperty Name="TypeADS" ColumnName="TypeADS" />
+          <ScalarProperty Name="NameADS" ColumnName="NameADS" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BMs">
+      <EntityTypeMapping TypeName="DataManagementModel.BM">
+        <MappingFragment StoreEntitySet="BM">
+          <ScalarProperty Name="idAC" ColumnName="idAC" />
+          <ScalarProperty Name="iaAC" ColumnName="iaAC" />
+          <ScalarProperty Name="idSA" ColumnName="idSA" />
+          <ScalarProperty Name="PaymentMethods" ColumnName="PaymentMethods" />
+          <ScalarProperty Name="Verified" ColumnName="Verified" />
+          <ScalarProperty Name="AdCreateLimit" ColumnName="AdCreateLimit" />
+          <ScalarProperty Name="SharingStatus" ColumnName="SharingStatus" />
+          <ScalarProperty Name="NameBM" ColumnName="NameBM" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Devices">
+      <EntityTypeMapping TypeName="DataManagementModel.Device">
+        <MappingFragment StoreEntitySet="Device">
+          <ScalarProperty Name="idSA" ColumnName="idSA" />
+          <ScalarProperty Name="typeDevice" ColumnName="typeDevice" />
+          <ScalarProperty Name="serialnumber" ColumnName="serialnumber" />
+          <ScalarProperty Name="nameDevice" ColumnName="nameDevice" />
+          <ScalarProperty Name="idDevice" ColumnName="idDevice" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GroupMs">
+      <EntityTypeMapping TypeName="DataManagementModel.GroupM">
+        <MappingFragment StoreEntitySet="GroupM">
+          <ScalarProperty Name="idAC" ColumnName="idAC" />
+          <ScalarProperty Name="CHECKidSA" ColumnName="CHECKidSA" />
+          <ScalarProperty Name="Topic" ColumnName="Topic" />
+          <ScalarProperty Name="languageG" ColumnName="languageG" />
+          <ScalarProperty Name="countryG" ColumnName="countryG" />
+          <ScalarProperty Name="MemCount" ColumnName="MemCount" />
+          <ScalarProperty Name="nameG" ColumnName="nameG" />
+          <ScalarProperty Name="idG" ColumnName="idG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PageMs">
+      <EntityTypeMapping TypeName="DataManagementModel.PageM">
+        <MappingFragment StoreEntitySet="PageM">
+          <ScalarProperty Name="idAC" ColumnName="idAC" />
+          <ScalarProperty Name="CHECKidSA" ColumnName="CHECKidSA" />
+          <ScalarProperty Name="Topic" ColumnName="Topic" />
+          <ScalarProperty Name="languageP" ColumnName="languageP" />
+          <ScalarProperty Name="countryP" ColumnName="countryP" />
+          <ScalarProperty Name="Verified" ColumnName="Verified" />
+          <ScalarProperty Name="RightManager" ColumnName="RightManager" />
+          <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+          <ScalarProperty Name="Reel" ColumnName="Reel" />
+          <ScalarProperty Name="Adbreak" ColumnName="Adbreak" />
+          <ScalarProperty Name="ViewCount" ColumnName="ViewCount" />
+          <ScalarProperty Name="VideoCount" ColumnName="VideoCount" />
+          <ScalarProperty Name="FollowCount" ColumnName="FollowCount" />
+          <ScalarProperty Name="nameP" ColumnName="nameP" />
+          <ScalarProperty Name="idP" ColumnName="idP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payouts">
+      <EntityTypeMapping TypeName="DataManagementModel.Payout">
+        <MappingFragment StoreEntitySet="Payout">
+          <ScalarProperty Name="idAC" ColumnName="idAC" />
+          <ScalarProperty Name="CHECKidSA" ColumnName="CHECKidSA" />
+          <ScalarProperty Name="EarningSources" ColumnName="EarningSources" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="NamePayout" ColumnName="NamePayout" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Resources">
+      <EntityTypeMapping TypeName="DataManagementModel.Resource">
+        <MappingFragment StoreEntitySet="Resource">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RoleSAs">
+      <EntityTypeMapping TypeName="DataManagementModel.RoleSA">
+        <MappingFragment StoreEntitySet="RoleSA">
+          <ScalarProperty Name="NamRole" ColumnName="NamRole" />
+          <ScalarProperty Name="idRole" ColumnName="idRole" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StaffaAccounts">
+      <EntityTypeMapping TypeName="DataManagementModel.StaffaAccount">
+        <MappingFragment StoreEntitySet="StaffaAccount">
+          <ScalarProperty Name="nameDevice" ColumnName="nameDevice" />
+          <ScalarProperty Name="idAC" ColumnName="idAC" />
+          <ScalarProperty Name="idSA" ColumnName="idSA" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StaffAccounts">
+      <EntityTypeMapping TypeName="DataManagementModel.StaffAccount">
+        <MappingFragment StoreEntitySet="StaffAccount">
+          <ScalarProperty Name="noteSA" ColumnName="noteSA" />
+          <ScalarProperty Name="cerated" ColumnName="cerated" />
+          <ScalarProperty Name="idRole" ColumnName="idRole" />
+          <ScalarProperty Name="PassWordSA" ColumnName="PassWordSA" />
+          <ScalarProperty Name="NameSA" ColumnName="NameSA" />
+          <ScalarProperty Name="UserSA" ColumnName="UserSA" />
+          <ScalarProperty Name="idSA" ColumnName="idSA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

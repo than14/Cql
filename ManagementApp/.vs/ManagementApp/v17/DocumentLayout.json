@@ -1,0 +1,302 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Cql\\ManagementApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|c:\\cql\\managementapp\\managementapp\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|c:\\cql\\managementapp\\managementapp\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|C:\\Cql\\ManagementApp\\managementapp\\faccountt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\faccountt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|C:\\Cql\\ManagementApp\\managementapp\\faccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\faccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|C:\\Cql\\ManagementApp\\managementapp\\faccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\faccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|c:\\cql\\managementapp\\managementapp\\faccountt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\faccountt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|c:\\cql\\managementapp\\managementapp\\class\\allaccountinfos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\class\\allaccountinfos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|C:\\Cql\\ManagementApp\\managementapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|C:\\Cql\\ManagementApp\\managementapp\\fgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\fgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|C:\\Cql\\ManagementApp\\managementapp\\fgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\fgroup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|C:\\Cql\\ManagementApp\\managementapp\\fpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\fpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|C:\\Cql\\ManagementApp\\managementapp\\fpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\fpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|C:\\Cql\\ManagementApp\\managementapp\\finserttn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\finserttn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|C:\\Cql\\ManagementApp\\managementapp\\ftest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\ftest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|C:\\Cql\\ManagementApp\\managementapp\\fdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\fdevice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|C:\\Cql\\ManagementApp\\managementapp\\class\\cbbstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\class\\cbbstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|C:\\Cql\\ManagementApp\\managementapp\\staffaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20B2AC2F-520C-4E97-92FE-FE935ED77BE4}|ManagementApp\\ManagementApp.csproj|solutionrelative:managementapp\\staffaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fMain.cs",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\fMain.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\fMain.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\fMain.cs",
+              "RelativeToolTip": "ManagementApp\\fMain.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAqwC0AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T01:28:55.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fMain.cs [Design]",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\fMain.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\fMain.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\fMain.cs [Design]",
+              "RelativeToolTip": "ManagementApp\\fMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T01:28:51.628Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\Program.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\Program.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\Program.cs",
+              "RelativeToolTip": "ManagementApp\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T08:48:12.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "fAccountT.cs",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\fAccountT.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\fAccountT.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\fAccountT.cs",
+              "RelativeToolTip": "ManagementApp\\fAccountT.cs",
+              "ViewState": "AQIAAK0AAAAAAAAAAAAAwL0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T08:46:49.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "fAccountT.cs [Design]",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\fAccountT.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\fAccountT.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\fAccountT.cs [Design]",
+              "RelativeToolTip": "ManagementApp\\fAccountT.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T08:44:54.467Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "fInsertTN.cs",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\fInsertTN.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\fInsertTN.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\fInsertTN.cs",
+              "RelativeToolTip": "ManagementApp\\fInsertTN.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAWwFkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T07:31:26.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "fGroup.cs [Design]",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\fGroup.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\fGroup.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\fGroup.cs [Design]",
+              "RelativeToolTip": "ManagementApp\\fGroup.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T06:58:50.272Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "fGroup.cs",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\fGroup.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\fGroup.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\fGroup.cs",
+              "RelativeToolTip": "ManagementApp\\fGroup.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAANAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T07:18:51.854Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "fPage.cs",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\fPage.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\fPage.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\fPage.cs",
+              "RelativeToolTip": "ManagementApp\\fPage.cs",
+              "ViewState": "AQIAAMEAAAAAAAAAAAAcwM4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T03:11:16.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "fPage.cs [Design]",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\fPage.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\fPage.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\fPage.cs [Design]",
+              "RelativeToolTip": "ManagementApp\\fPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-22T02:49:21.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "fAccount.cs [Design]",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\fAccount.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\fAccount.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\fAccount.cs [Design]",
+              "RelativeToolTip": "ManagementApp\\fAccount.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-17T01:06:12.534Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "fAccount.cs",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\fAccount.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\fAccount.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\fAccount.cs",
+              "RelativeToolTip": "ManagementApp\\fAccount.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAAwGAAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T07:42:32.457Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AllAccountInfos.cs",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\class\\AllAccountInfos.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\class\\AllAccountInfos.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\class\\AllAccountInfos.cs",
+              "RelativeToolTip": "ManagementApp\\class\\AllAccountInfos.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAxwHwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T01:05:00.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "fTest.cs",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\fTest.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\fTest.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\fTest.cs",
+              "RelativeToolTip": "ManagementApp\\fTest.cs",
+              "ViewState": "AQIAAFIBAAAAAAAAAAAkwFkBAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T01:09:25.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "fDevice.cs [Design]",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\fDevice.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\fDevice.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\fDevice.cs [Design]",
+              "RelativeToolTip": "ManagementApp\\fDevice.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T04:18:39.694Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "cbbStatus.cs",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\class\\cbbStatus.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\class\\cbbStatus.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\class\\cbbStatus.cs",
+              "RelativeToolTip": "ManagementApp\\class\\cbbStatus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T09:45:10.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "StaffAccount.cs",
+              "DocumentMoniker": "C:\\Cql\\ManagementApp\\ManagementApp\\StaffAccount.cs",
+              "RelativeDocumentMoniker": "ManagementApp\\StaffAccount.cs",
+              "ToolTip": "C:\\Cql\\ManagementApp\\ManagementApp\\StaffAccount.cs",
+              "RelativeToolTip": "ManagementApp\\StaffAccount.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-20T09:02:33.651Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataManagementModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DataManagementEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="DataManagementModel.Account" />
+    <EntitySet Name="ADS" EntityType="DataManagementModel.AD" />
+    <EntitySet Name="BMs" EntityType="DataManagementModel.BM" />
+    <EntitySet Name="Devices" EntityType="DataManagementModel.Device" />
+    <EntitySet Name="GroupMs" EntityType="DataManagementModel.GroupM" />
+    <EntitySet Name="PageMs" EntityType="DataManagementModel.PageM" />
+    <EntitySet Name="Payouts" EntityType="DataManagementModel.Payout" />
+    <EntitySet Name="Resources" EntityType="DataManagementModel.Resource" />
+    <EntitySet Name="RoleSAs" EntityType="DataManagementModel.RoleSA" />
+    <EntitySet Name="StaffaAccounts" EntityType="DataManagementModel.StaffaAccount" />
+    <EntitySet Name="StaffAccounts" EntityType="DataManagementModel.StaffAccount" />
+    <AssociationSet Name="FK_NV_RL" Association="DataManagementModel.FK_NV_RL">
+      <End Role="RoleSA" EntitySet="RoleSAs" />
+      <End Role="StaffAccount" EntitySet="StaffAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RL_NV" Association="DataManagementModel.FK_RL_NV">
+      <End Role="RoleSA" EntitySet="RoleSAs" />
+      <End Role="StaffAccount" EntitySet="StaffAccounts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="UID" />
+    </Key>
+    <Property Name="UID" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="NameAC" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CountryAC" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="idSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="idDevice" Type="Int32" />
+    <Property Name="passAC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="twoFA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="emailAC" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="passEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="AD">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="NameADS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TypeADS" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IsPersonal" Type="Boolean" />
+    <Property Name="Currency" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Limit" Type="Int32" />
+    <Property Name="Threshold" Type="Int32" />
+    <Property Name="Balance" Type="Int32" />
+    <Property Name="SpentAmount" Type="Int32" />
+    <Property Name="PaymentMethods" Type="Int32" />
+    <Property Name="idSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="idAC" Type="Int32" />
+  </EntityType>
+  <EntityType Name="BM">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="NameBM" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SharingStatus" Type="Int32" />
+    <Property Name="AdCreateLimit" Type="Int32" />
+    <Property Name="Verified" Type="Int32" />
+    <Property Name="PaymentMethods" Type="Int32" />
+    <Property Name="idSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="iaAC" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="idAC" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Device">
+    <Key>
+      <PropertyRef Name="idDevice" />
+    </Key>
+    <Property Name="idDevice" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nameDevice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="serialnumber" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="typeDevice" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="idSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="GroupM">
+    <Key>
+      <PropertyRef Name="idG" />
+    </Key>
+    <Property Name="idG" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="nameG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MemCount" Type="Int32" />
+    <Property Name="countryG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="languageG" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Topic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CHECKidSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="idAC" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PageM">
+    <Key>
+      <PropertyRef Name="idP" />
+    </Key>
+    <Property Name="idP" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="nameP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FollowCount" Type="Int32" />
+    <Property Name="VideoCount" Type="Int32" />
+    <Property Name="ViewCount" Type="Int32" />
+    <Property Name="Adbreak" Type="Boolean" />
+    <Property Name="Reel" Type="Boolean" />
+    <Property Name="Bonus" Type="Boolean" />
+    <Property Name="RightManager" Type="Boolean" />
+    <Property Name="Verified" Type="Boolean" />
+    <Property Name="countryP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="languageP" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Topic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CHECKidSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="idAC" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Payout">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="NamePayout" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EarningSources" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="CHECKidSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="idAC" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Resource">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RoleSA">
+    <Key>
+      <PropertyRef Name="idRole" />
+    </Key>
+    <Property Name="idRole" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NamRole" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="StaffAccounts" Relationship="DataManagementModel.FK_NV_RL" FromRole="RoleSA" ToRole="StaffAccount" />
+    <NavigationProperty Name="StaffAccounts1" Relationship="DataManagementModel.FK_RL_NV" FromRole="RoleSA" ToRole="StaffAccount" />
+  </EntityType>
+  <EntityType Name="StaffaAccount">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="idSA" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="idAC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="nameDevice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="StaffAccount">
+    <Key>
+      <PropertyRef Name="idSA" />
+    </Key>
+    <Property Name="idSA" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="UserSA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="NameSA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PassWordSA" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="idRole" Type="Int32" />
+    <Property Name="cerated" Type="DateTime" Precision="0" />
+    <Property Name="noteSA" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="RoleSA" Relationship="DataManagementModel.FK_NV_RL" FromRole="StaffAccount" ToRole="RoleSA" />
+    <NavigationProperty Name="RoleSA1" Relationship="DataManagementModel.FK_RL_NV" FromRole="StaffAccount" ToRole="RoleSA" />
+  </EntityType>
+  <Association Name="FK_NV_RL">
+    <End Type="DataManagementModel.RoleSA" Role="RoleSA" Multiplicity="0..1" />
+    <End Type="DataManagementModel.StaffAccount" Role="StaffAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoleSA">
+        <PropertyRef Name="idRole" />
+      </Principal>
+      <Dependent Role="StaffAccount">
+        <PropertyRef Name="idRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RL_NV">
+    <End Type="DataManagementModel.RoleSA" Role="RoleSA" Multiplicity="0..1" />
+    <End Type="DataManagementModel.StaffAccount" Role="StaffAccount" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RoleSA">
+        <PropertyRef Name="idRole" />
+      </Principal>
+      <Dependent Role="StaffAccount">
+        <PropertyRef Name="idRole" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
